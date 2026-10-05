@@ -17,7 +17,6 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FavoritesScreen() {
-
     Scaffold(
         topBar = {
             TopAppBar(
@@ -27,7 +26,6 @@ fun FavoritesScreen() {
             )
         }
     ) { innerPadding ->
-
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -36,10 +34,15 @@ fun FavoritesScreen() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-
             Text(
                 text = "No favorite athletes yet",
                 style = MaterialTheme.typography.headlineSmall
+            )
+
+            Text(
+                text = "Add athletes to your favorites to see them here.",
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.padding(top = 8.dp)
             )
         }
     }
